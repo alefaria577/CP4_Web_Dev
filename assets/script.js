@@ -88,7 +88,7 @@ document.getElementById('filterForm').addEventListener('submit', (event) => {
 
 async function loadProducts() {
     try {
-        const response = await fetch('produtos.json');
+        const response = await fetch('./assets/produtos.json');
         products = await response.json();  // Carregar produtos na variável global
         displayProducts(products);
     } catch (error) {
