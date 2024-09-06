@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Selena Gomez",
+    "year": 1992,
+    "worth": "$95M"
+  },
+  {
+    "name": "Dwayne Johnson",
+    "year": 1972,
+    "worth": "$800M"
+  },
+  {
+    "name": "Justin Bieber",
+    "year": 1994,
+    "worth": "$285M"
+  },
+  {
+    "name": "Cristiano Ronaldo",
+    "year": 1985,
+    "worth": "$490M"
+  }
+]

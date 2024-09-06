@@ -1,0 +1,269 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --one-theme-cyan: #01a5b1;
+    --three-theme-blue: #131e2f;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: unset;
+    color: inherit;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 36px;
+    height: 10vh;
+    background-color: var(--three-theme-blue);
+    color: #fff;
+    position: fixed;
+    width: 100vw;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#btnColor {
+    padding: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    border: unset;
+    border: 2px solid #fff;
+}
+.menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu li {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+main {
+    padding-top: 10vh;
+    overflow-y: auto;
+    background-color: #000000;
+}
+
+/* #imgBanner {
+    width: 40vw;
+    height: 40vh;
+}
+
+#banner {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding: 12px 0px;
+} */
+
+#banner {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+    background-position: top;
+    background-size: contain;
+    padding-bottom: 32px;
+}
+
+#banner::before {
+    content: "";
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% de opacidade, escurecendo o background */
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#cards {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    width: 100vw;
+    min-height: 80vh;
+    padding: 24px 36px;
+}
+
+#btnBanner {
+    z-index: 1;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 20px 24px;
+    border-radius: 8px;
+    border: 3px solid var(--one-theme-cyan);
+    transition: all 0.7s;
+}
+
+#btnBanner:hover {
+    background-color: var(--one-theme-cyan);
+    box-shadow:
+        0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4;
+}
+
+.arrow-down {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 42vw;
+    color: var(--one-theme-cyan);
+}
+
+.fa-chevron-down {
+    font-size: 40px;
+}
+
+.arrow-down span {
+    height: 80vh;
+    width: 6px;
+    background-color: var(--one-theme-cyan);
+    border-radius: 10px;
+}
+
+.title-cards h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    padding-right: 10px;
+}
+
+.title-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 14%;
+}
+
+.line {
+    height: 6px;
+    width: 100%;
+    background-color: var(--one-theme-cyan);
+}
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 5%;
+}
+
+.box-card {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    flex: 0 1 calc(25% - 5%);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    height: 480px;
+}
+
+.box-img {
+    background: linear-gradient(180deg, #aebdd1 0%, #3c495a 100%);
+    border-radius: 20px 20px 0px 0px;
+}
+
+.box-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #131e2f;
+    border-radius: 0px 0px 20px 20px;
+    padding-top: 20px;
+    color: #fff;
+    gap: 10px;
+    padding: 20px 32px 0px 32px;
+}
+
+.price {
+    display: flex;
+    gap: 5px;
+    padding-bottom: 16px;
+}
+
+.price span {
+    text-decoration: line-through;
+    color: #333333;
+}
+
+.box-img img {
+    width: 100%;
+}
+
+.box-info p {
+    text-align: justify;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    background-color: var(--three-theme-blue);
+    color: white;
+    font-weight: 500;
+}
+.spinner {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 5px solid lightgray;
+    border-top: 5px solid blue;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#filterForm {
+    display: flex; /* Torna o formulário um container flex */
+    flex-direction: column; /* Coloca os elementos do formulário em coluna */
+    gap: 10px; /* Espaçamento entre os elementos do formulário */
+    padding: 20px; /* Adiciona algum preenchimento ao redor do formulário */
+    background-color: #ffffff; /* Cor de fundo do formulário para torná-lo visível */
+    border: 1px solid var(--three-theme-blue); /* Borda para destacar o formulário */
+    border-radius: 8px; /* Bordas arredondadas */
+    width: 300px; /* Largura do formulário */
+    margin: 20px auto; /* Centraliza o formulário horizontalmente */
+    z-index: 2; /* Garante que o formulário apareça acima de outros elementos */
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/loja.css">
+    <title>Loja</title>
+</head>
+
+<body>
+    <header>
+        <h1>Loja Sustentável</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="./index.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <main id="container">
+
+
+
+<form id="filterForm">
+    <label for="filterCategory">Categoria:</label>
+    <select id="filterCategory">
+        <option value="all">Todos</option>
+        <option value="bags">Bolsas</option>
+        <option value="shoes">Sapatos</option>
+        <option value="brush">Escovas</option> <!-- Nova Categoria -->
+        <option value="soap">Sabonetes</option> <!-- Nova Categoria -->
+        <option value="deodorant">Desodorantes</option> <!-- Nova Categoria -->
+    </select>
+
+    <label for="filterPrice">Preço Máximo:</label>
+    <input type="number" id="filterPrice" />
+
+    <button type="submit">Filtrar</button>
+</form>
+
+
+
+
+        <div id="spinner" style="display: none;">Carregando...</div>
+
+        <section id="cards">
+            <div class="title-cards">
+                <h1 id="txt-modelos">Modelos</h1>
+                <span class="line"></span>
+            </div>
+
+            <div class="container-cards">
+                <!-- Produtos iniciais (serão sobrescritos pelo JavaScript quando a página for carregada) -->
+                <div class="box-card">
+                    <figure class="box-img">
+                        <img src="./img/bolsa.png" alt="Bolsa feita de material reciclado">
+                    </figure>
+                    <div class="box-info">
+                        <h3>Bolsa feita de material reciclado</h3>
+                        <div class="price">
+                            <span id="priceThrough">R$240,00</span>
+                            <strong>R$120,00</strong>
+                        </div>
+                        <p>Uma alternativa ecológica às escovas de plástico, feita de bambu biodegradável e cerdas suaves, ideal para reduzir o impacto ambiental no seu dia a dia.</p>
+                        <button class="add-to-cart" data-product-id="1">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="box-card">
+                    <figure class="box-img">
+                        <img src="./img/sapatos.png" alt="Sapatos veganos">
+                    </figure>
+                    <div class="box-info">
+                        <h3>Sapatos veganos</h3>
+                        <div class="price">
+                            <span id="priceThrough">R$500,00</span>
+                            <strong>R$250,00</strong>
+                        </div>
+                        <p>Confeccionados sem nenhum material de origem animal, esses sapatos são duráveis, confortáveis e estilosos, perfeitos para quem busca um calçado ético e sustentável.</p>
+                        <button class="add-to-cart" data-product-id="2">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <!-- Outros produtos podem ser adicionados aqui como padrão ou serão carregados dinamicamente -->
+            </div>
+        </section>
+    </main>
+    <footer>@2024 - Todos os direitos reservados</footer>
+
+    <!-- Inclusão do arquivo JavaScript separado -->
+    <script src="assets/script.js"></script>
+    <script src="https://kit.fontawesome.com/cb4f3aa626.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Bolsa feita de material reciclado",
+        "price": 120,
+        "category": "bags",
+        "image": "./img/bolsa.png",
+        "description": "Uma alternativa ecológica às escovas de plástico, feita de bambu biodegradável e cerdas suaves, ideal para reduzir o impacto ambiental no seu dia a dia."
+    },
+    {
+        "id": 2,
+        "name": "Sapatos veganos",
+        "price": 250,
+        "category": "shoes",
+        "image": "./img/sapatos.png",
+        "description": "Confeccionados sem nenhum material de origem animal, esses sapatos são duráveis, confortáveis e estilosos, perfeitos para quem busca um calçado ético e sustentável."
+    },
+    {
+        "id": 3,
+        "name": "Escova de dente de bambu",
+        "price": 15,
+        "category": "brush",
+        "image": "./img/escova.png",
+        "description": "Feita de bambu biodegradável, esta escova de dentes é uma escolha sustentável para o seu cuidado dental."
+    },
+    {
+        "id": 4,
+        "name": "Sabonete sólido",
+        "price": 20,
+        "category": "soap",
+        "image": "./img/sabonete.png",
+        "description": "Um sabonete sólido natural, sem plástico, que é gentil com a sua pele e com o meio ambiente."
+    },
+    {
+        "id": 5,
+        "name": "Desodorante natural",
+        "price": 30,
+        "category": "deodorant",
+        "image": "./img/desodorante.png",
+        "description": "Desodorante natural feito com ingredientes seguros e sustentáveis."
+    }
+]

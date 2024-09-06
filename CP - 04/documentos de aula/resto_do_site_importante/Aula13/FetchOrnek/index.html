@@ -1,0 +1,24 @@
+<ul id="people"></ul>
+
+<script>
+  let ul = document.getElementById("people");
+
+  fetch("people.json")
+    .then(res => res.json())
+    .then(data => {
+      for (const p of data) {
+        ul.innerHTML += `
+        <li>
+          ${p.name} (${p.year}) - ${p.worth}
+        </li>
+        `;
+      }
+    })
+    .catch(error => console.error(error));;
+</script>
+
+<style>
+  body {
+    font-family: oswald;
+  }
+</style>

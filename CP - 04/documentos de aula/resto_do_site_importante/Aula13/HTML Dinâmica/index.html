@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+</head>
+<body>
+
+<!-- Incluir o cabeçalho -->
+<div id="header"></div>
+<!-- Incluir o conteúdo principal -->
+<div id="main-content"></div>
+<!-- Incluir o rodapé -->
+<div id="footer"></div>
+
+<script>
+    // Função para carregar o conteúdo das partes da página
+    function loadPageParts() {
+        // Carregar o cabeçalho
+        fetch('header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('header').innerHTML = html;
+            });
+
+        // Carregar o conteúdo principal
+        fetch('main-content.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('main-content').innerHTML = html;
+            });
+
+        // Carregar o rodapé
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer').innerHTML = html;
+            });
+    }
+    // Chamar a função para carregar as partes da página quando a página for carregada
+    window.onload = loadPageParts;
+</script>
+</body>
+</html>
